@@ -1,6 +1,6 @@
-package com.example.algorithms.union;
+package com.example.algorithms.union.java;
 
-public class QuickUnion {
+public class QuickUnionJava {
 
     /*
     Quick union - faster than quick find but still too slow
@@ -14,7 +14,7 @@ public class QuickUnion {
     private int[] id;
     private int[] sizeArray; // count number of objects in the tree rooted at 'i'
 
-    public void quickUnion(int N) {
+    public void startQuickUnion(int N) {
         id = new int[N];
         for (int i = 0; i < N; i++) {
             id[i] = i;
@@ -29,25 +29,25 @@ public class QuickUnion {
         return i;
     }
 
-    boolean quConnected(int p, int q) {
+    boolean connected(int p, int q) {
         return root(p) == root(q);
     }
 
-    // Quick union union() implementation
-    public void quUnion(int p, int q) {
+    // union() implementation
+    public void union(int p, int q) {
         int i = root(p);
         int j = root(q);
         id[i] = j;
     }
 
     /*
-    Quick union weight improved union() implementation
+    Weight improved union() implementation
     - link root of smaller tree to root of larger tree
     - update the sizeArray[]
 
     Thanks to update depth of any node 'x' is at most log N (lg - base 2 logarithm)
     */
-    public void quWeightedUnion(int p, int q) {
+    public void weightedUnion(int p, int q) {
         int i = root(p);
         int j = root(q);
 

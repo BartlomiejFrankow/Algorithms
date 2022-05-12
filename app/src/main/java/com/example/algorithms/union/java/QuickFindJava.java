@@ -1,6 +1,6 @@
-package com.example.algorithms.union;
+package com.example.algorithms.union.java;
 
-public class QuickFind {
+public class QuickFindJava {
 
      /*
      Quick Find example O(n^2) - too slow for big problems
@@ -20,11 +20,11 @@ public class QuickFind {
         }
     }
 
-    boolean qfConnected(int p, int q) {
+    boolean connected(int p, int q) {
         return id[p] == id[q];
     }
 
-    void qfUnion(int p, int q) {
+    void union(int p, int q) {
         int pid = id[p];
         int qid = id[q];
 
