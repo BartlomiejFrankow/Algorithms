@@ -10,8 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.algorithms.binarySearch.BinarySearch
 import com.example.algorithms.tasks.TreePrinter
-import com.example.algorithms.timeComplexity.TimeComplexity
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +20,9 @@ class MainActivity : ComponentActivity() {
 
 //        taskOne()
 
-        TimeComplexity().checkOLogN()
+//        TimeComplexity().checkOLogN()
+
+        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
 
         setContent {
             AlgorithmsTheme {
