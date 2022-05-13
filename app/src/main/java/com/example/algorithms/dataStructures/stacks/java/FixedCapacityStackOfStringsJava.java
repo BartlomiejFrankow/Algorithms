@@ -1,0 +1,31 @@
+package com.example.algorithms.dataStructures.stacks.java;
+
+public class FixedCapacityStackOfStringsJava {
+    private String[] s;
+    private int N = 0;
+
+    FixedCapacityStackOfStringsJava(int capacity) {
+        s = new String[capacity];
+    }
+
+    boolean isEmpty() {
+        return N == 0;
+    }
+
+    void push(String item) {
+        s[N++] = item;
+    }
+
+    // Loitering - holding a reference to an object when is no longer needed
+    // Loitering pop
+    String loiteringPop() {
+        return s[--N];
+    }
+
+    // This version avoids loitering. Garbage collector can reclaim memory only if no outstanding references
+    String pop() {
+        String item = s[--N];
+        s[N] = null;
+        return item;
+    }
+}
