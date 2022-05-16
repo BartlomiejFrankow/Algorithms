@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.algorithms.binarySearch.BinarySearch
+import com.example.algorithms.sort.selection.SelectionSortKotlin
 import com.example.algorithms.tasks.TreePrinter
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 
@@ -22,7 +22,9 @@ class MainActivity : ComponentActivity() {
 
 //        TimeComplexity().checkOLogN()
 
-        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
+//        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
+
+        SelectionSortKotlin().sortIntegersAscending(arrayOf(5,4,1,2,3,6,9,8,7,10))
 
         setContent {
             AlgorithmsTheme {
