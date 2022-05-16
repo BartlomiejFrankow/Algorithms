@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class ShellSort {
 
     public void sortIntegersAscending(@NotNull Integer[] array) {
-        long beginTime = System.nanoTime();
+        long beginTime = System.currentTimeMillis();
         println("SHELL SORT INPUT DATA: " + Arrays.toString(array));
 
         int arraySize = array.length;
@@ -32,8 +32,8 @@ public class ShellSort {
             sequence = sequence / 3;
         }
 
-        long endTime = System.nanoTime();
-        println("SHELL SORT TIME: " + (endTime - beginTime) / 1000 + ", results: " + Arrays.toString(array));
+        long endTime = System.currentTimeMillis();
+        println("SHELL SORT TIME: " + (endTime - beginTime) + ", results: " + Arrays.toString(array));
 
     }
 }

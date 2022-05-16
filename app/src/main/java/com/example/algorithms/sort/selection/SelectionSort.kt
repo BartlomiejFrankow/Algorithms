@@ -1,7 +1,6 @@
 package com.example.algorithms.sort.selection
 
 import com.example.algorithms.sort.exchange
-import kotlin.system.measureNanoTime
 import kotlin.system.measureTimeMillis
 
 // Time complexity: O(n^2/2)
@@ -11,7 +10,7 @@ class SelectionSort {
     fun sortIntegersAscending(array: Array<Int>) {
         println("SELECTION SORT INPUT DATA: ${array.contentToString()}")
 
-        val measuredTime = measureNanoTime {
+        val measuredTime = measureTimeMillis {
             val size = array.size
 
             for (item in 0 until size) {
@@ -28,7 +27,7 @@ class SelectionSort {
                 // ...and so on check for a swap for every item in list
             }
         }
-        println("SELECTION SORT TIME: ${measuredTime / 1000}, results: ${array.contentToString()}")
+        println("SELECTION SORT TIME: $measuredTime, results: ${array.contentToString()}")
     }
 
 }

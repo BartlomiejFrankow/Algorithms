@@ -1,7 +1,7 @@
 package com.example.algorithms.sort.insertion
 
 import com.example.algorithms.sort.exchange
-import kotlin.system.measureNanoTime
+import kotlin.system.measureTimeMillis
 
 // Time complexity: O(1/4 n^2)
 // Faster than selection sort in best scenario (partly sorted array) but lower in worst (desc input array)
@@ -9,7 +9,7 @@ class InsertionSort {
 
     fun sortIntegersAscending(array: Array<Int>) {
         println("INSERTION SORT INPUT DATA: ${array.contentToString()}")
-        val measuredTime = measureNanoTime {
+        val measuredTime = measureTimeMillis {
             val size = array.size
 
             for (item in 0 until size) {
@@ -27,7 +27,7 @@ class InsertionSort {
             }
         }
 
-        println("INSERTION SORT TIME: ${measuredTime / 1000}, results: ${array.contentToString()}")
+        println("INSERTION SORT TIME: $measuredTime, results: ${array.contentToString()}")
     }
 
 }
