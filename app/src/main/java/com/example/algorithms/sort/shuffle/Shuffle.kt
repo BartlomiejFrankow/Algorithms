@@ -7,7 +7,7 @@ import kotlin.system.measureTimeMillis
 // Time complexity: O(n)
 class Shuffle {
     fun randomize(array: Array<Int>) {
-        println("SHUFFLE INPUT DATA: ${array.contentToString()}")
+        println("SHUFFLE SORT INPUT DATA: ${array.contentToString()}")
 
         val measuredTime = measureTimeMillis {
             for (item in array.indices) {
@@ -16,6 +16,6 @@ class Shuffle {
             }
         }
 
-        println("SHUFFLE TIME: $measuredTime, results: ${array.contentToString()}")
+        println("SHUFFLE SORT TIME: $measuredTime, results: ${array.contentToString()}")
     }
 }

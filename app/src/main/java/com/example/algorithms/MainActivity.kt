@@ -12,7 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.algorithms.sort.insertion.InsertionSort
 import com.example.algorithms.sort.selection.SelectionSort
-import com.example.algorithms.sort.shell.ShellSort
+import com.example.algorithms.sort.shell.java.ShellSortJava
+import com.example.algorithms.sort.shell.kotlin.ShellSortKotlin
 import com.example.algorithms.sort.shuffle.Shuffle
 import com.example.algorithms.tasks.TreePrinter
 import com.example.algorithms.ui.theme.AlgorithmsTheme
@@ -32,9 +33,11 @@ class MainActivity : ComponentActivity() {
 //        val randomIntegers = Array(100 * times) { Random().nextInt(1000 * times) }
 //        val randomCopy = randomIntegers.copyOf()
 //        val anotherRandomCopy = randomIntegers.copyOf()
+//        val oneMoreRandomCopy = randomIntegers.copyOf()
 //        SelectionSort().sortIntegersAscending(randomIntegers)
 //        InsertionSort().sortIntegersAscending(randomCopy)
-//        ShellSort().sortIntegersAscending(anotherRandomCopy)
+//        ShellSortJava().sortIntegersAscending(anotherRandomCopy)
+//        ShellSortKotlin().sortIntegersAscending(oneMoreRandomCopy)
 //        Shuffle().randomize(randomIntegers)
 
         setContent {

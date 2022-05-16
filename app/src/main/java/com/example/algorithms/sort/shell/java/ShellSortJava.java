@@ -1,4 +1,4 @@
-package com.example.algorithms.sort.shell;
+package com.example.algorithms.sort.shell.java;
 
 import static com.example.algorithms.help.StdOut.println;
 import static com.example.algorithms.sort.SortHelperKt.exchange;
@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 // Time complexity: O(n^3/2)
-public class ShellSort {
+public class ShellSortJava {
 
     public void sortIntegersAscending(@NotNull Integer[] array) {
         long beginTime = System.currentTimeMillis();
