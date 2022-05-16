@@ -10,9 +10,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.algorithms.sort.selection.SelectionSortKotlin
+import com.example.algorithms.sort.insertion.InsertionSort
+import com.example.algorithms.sort.selection.SelectionSort
 import com.example.algorithms.tasks.TreePrinter
 import com.example.algorithms.ui.theme.AlgorithmsTheme
+import java.util.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +26,9 @@ class MainActivity : ComponentActivity() {
 
 //        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
 
-        SelectionSortKotlin().sortIntegersAscending(arrayOf(5,4,1,2,3,6,9,8,7,10))
+        val randomIntegers = Array(50) { Random().nextInt(1000) }
+        SelectionSort().sortIntegersAscending(randomIntegers)
+        InsertionSort().sortIntegersAscending(randomIntegers)
 
         setContent {
             AlgorithmsTheme {

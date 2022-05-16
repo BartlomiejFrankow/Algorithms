@@ -1,10 +1,14 @@
 package com.example.algorithms.sort.selection
 
-// Time complexity: O(n^2)
-// Quadratic time complexity can't resolve big problems
-class SelectionSortKotlin {
+import com.example.algorithms.sort.exchange
+
+// Time complexity: O(n^2/2)
+// Quadratic time complexity divided by 2 can't resolve big problems
+class SelectionSort {
 
     fun sortIntegersAscending(array: Array<Int>) {
+        val beginTime = System.nanoTime()
+
         println("SELECTION SEARCH INPUT DATA: ${array.contentToString()}")
 
         val size = array.size
@@ -23,14 +27,9 @@ class SelectionSortKotlin {
             // ...and so on check for a swap for every item in list
         }
 
-        println("SELECTION SEARCH RESULTS: ${array.contentToString()}")
-    }
+        val endTime = System.nanoTime()
 
-    private fun exchange(array: Array<Int>, indexToBeSwap: Int, swapIndex: Int) {
-        val swap = array[indexToBeSwap]
-
-        array[indexToBeSwap] = array[swapIndex]
-        array[swapIndex] = swap
+        println("SELECTION SEARCH RESULTS: ${array.contentToString()}, time: ${endTime - beginTime}")
     }
 
 }
