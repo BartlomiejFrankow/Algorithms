@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.algorithms.sort.insertion.InsertionSort
 import com.example.algorithms.sort.selection.SelectionSort
+import com.example.algorithms.sort.shell.ShellSort
 import com.example.algorithms.tasks.TreePrinter
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 import java.util.*
@@ -26,9 +27,12 @@ class MainActivity : ComponentActivity() {
 
 //        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
 
-        val randomIntegers = Array(50) { Random().nextInt(1000) }
+        val randomIntegers = Array(1000) { Random().nextInt(10000) }
+        val randomCopy = randomIntegers.copyOf()
+        val anotherRandomCopy = randomIntegers.copyOf()
         SelectionSort().sortIntegersAscending(randomIntegers)
-        InsertionSort().sortIntegersAscending(randomIntegers)
+        InsertionSort().sortIntegersAscending(randomCopy)
+        ShellSort().sortIntegersAscending(anotherRandomCopy)
 
         setContent {
             AlgorithmsTheme {
