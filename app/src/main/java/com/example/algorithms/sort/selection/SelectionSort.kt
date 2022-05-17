@@ -7,17 +7,16 @@ import kotlin.system.measureTimeMillis
 // Quadratic time complexity divided by 2 can't resolve big problems
 class SelectionSort {
 
-    fun sortIntegersAscending(array: Array<Int>) {
+    fun sortIntegersAscending(array: Array<Int>, start: Int, end: Int) {
         println("SELECTION SORT INPUT DATA: ${array.contentToString()}")
 
         val measuredTime = measureTimeMillis {
-            val size = array.size
 
-            for (item in 0 until size) {
+            for (item in start until end) {
                 var minimum = item
 
                 // search for value lower than value from previous index
-                for (nextItem in item + 1 until size) {
+                for (nextItem in item + 1 until end) {
                     if (array[nextItem] < array[minimum]) minimum = nextItem
                 }
 

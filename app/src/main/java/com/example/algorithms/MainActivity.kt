@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.algorithms.sort.insertion.InsertionSort
+import com.example.algorithms.sort.merge.MergeSort
 import com.example.algorithms.sort.selection.SelectionSort
 import com.example.algorithms.sort.shell.java.ShellSortJava
 import com.example.algorithms.sort.shell.kotlin.ShellSortKotlin
@@ -29,16 +30,18 @@ class MainActivity : ComponentActivity() {
 
 //        BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2)
 
-//        val times = 1000
+//        val times = 100
 //        val randomIntegers = Array(100 * times) { Random().nextInt(1000 * times) }
 //        val randomCopy = randomIntegers.copyOf()
 //        val anotherRandomCopy = randomIntegers.copyOf()
 //        val oneMoreRandomCopy = randomIntegers.copyOf()
-//        SelectionSort().sortIntegersAscending(randomIntegers)
+//        val nextRandomCopy = randomIntegers.copyOf()
+//        SelectionSort().sortIntegersAscending(randomIntegers, 0, randomIntegers.size)
 //        InsertionSort().sortIntegersAscending(randomCopy)
 //        ShellSortJava().sortIntegersAscending(anotherRandomCopy)
 //        ShellSortKotlin().sortIntegersAscending(oneMoreRandomCopy)
 //        Shuffle().randomize(randomIntegers)
+//        MergeSort().merge(nextRandomCopy)
 
         setContent {
             AlgorithmsTheme {
