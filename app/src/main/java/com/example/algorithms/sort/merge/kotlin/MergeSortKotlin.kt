@@ -1,4 +1,4 @@
-package com.example.algorithms.sort.merge
+package com.example.algorithms.sort.merge.kotlin
 
 import com.example.algorithms.sort.selection.SelectionSort
 
@@ -7,7 +7,7 @@ import com.example.algorithms.sort.selection.SelectionSort
 * Compares? Merge sort IS OPTIMAL with respect to number of compares.
 * Space? Merge sort IS NOT OPTIMAL with respect to space usage.
 */
-class MergeSort {
+class MergeSortKotlin {
 
     private var beginTime = 0L
     private val selectionSort = SelectionSort()
@@ -24,6 +24,7 @@ class MergeSort {
 
         val mid = (start + end) / 2
 
+        // Not recursive implementation. Only one time sort for each side
         selectionSort.sortIntegersAscending(mainArray, start, mid)
         selectionSort.sortIntegersAscending(mainArray, mid, end)
         merge(mainArray, start, mid, end)
