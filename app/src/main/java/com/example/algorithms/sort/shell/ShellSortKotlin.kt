@@ -1,4 +1,4 @@
-package com.example.algorithms.sort.shell.kotlin
+package com.example.algorithms.sort.shell
 
 import com.example.algorithms.help.StdOut
 import com.example.algorithms.sort.exchange

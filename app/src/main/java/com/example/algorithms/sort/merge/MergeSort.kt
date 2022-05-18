@@ -12,6 +12,23 @@ class MergeSort {
     private var beginTime = 0L
     private val selectionSort = SelectionSort()
 
+    fun merge(mainArray: Array<Int>) {
+        println("MERGE SORT INPUT DATA: ${mainArray.contentToString()}")
+        beginTime = System.currentTimeMillis()
+
+        sort(mainArray, 0, mainArray.size)
+    }
+
+    private fun sort(mainArray: Array<Int>, start: Int, end: Int) {
+        if (start >= end) return
+
+        val mid = (start + end) / 2
+
+        selectionSort.sortIntegersAscending(mainArray, start, mid)
+        selectionSort.sortIntegersAscending(mainArray, mid, end)
+        merge(mainArray, start, mid, end)
+    }
+
     private fun merge(mainArray: Array<Int>, start: Int, mid: Int, end: Int) {
         val leftArray = mainArray.copyOfRange(start, mid)
         val rightArray = mainArray.copyOfRange(mid, end)
@@ -41,23 +58,6 @@ class MergeSort {
         }
 
         println("MERGE SORT TIME: ${System.currentTimeMillis() - beginTime}, result: ${mainArray.contentToString()}")
-    }
-
-    private fun sort(mainArray: Array<Int>, start: Int, end: Int) {
-        println("MERGE SORT INPUT DATA: ${mainArray.contentToString()}")
-
-        beginTime = System.currentTimeMillis()
-        if (start >= end) return
-
-        val mid = (start + end) / 2
-
-        selectionSort.sortIntegersAscending(mainArray, start, mid)
-        selectionSort.sortIntegersAscending(mainArray, mid, end)
-        merge(mainArray, start, mid, end)
-    }
-
-    fun merge(mainArray: Array<Int>) {
-        sort(mainArray, 0, mainArray.size)
     }
 
 }
