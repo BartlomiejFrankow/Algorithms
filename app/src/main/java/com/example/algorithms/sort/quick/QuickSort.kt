@@ -1,7 +1,12 @@
 package com.example.algorithms.sort.quick
 
 import com.example.algorithms.sort.exchange
+import com.example.algorithms.sort.shuffle.Shuffle
 
+/*
+* Time complexity in best case: ~O(n log n)
+* Time complexity in worst case: ~O(1/2 n^2) - shuffling eliminates worst case
+* */
 class QuickSort {
 
     private var beginTime = 0L
@@ -9,6 +14,8 @@ class QuickSort {
     fun sort(mainArray: Array<Int>) {
         println("QUICK SORT INPUT DATA: ${mainArray.contentToString()}")
         beginTime = System.currentTimeMillis()
+
+        Shuffle().randomize(mainArray) // Shuffling is needed for performance guarantee
 
         sort(mainArray, 0, mainArray.size - 1)
     }
