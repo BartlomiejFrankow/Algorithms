@@ -3,8 +3,16 @@ package com.example.algorithms.sort.selection
 import com.example.algorithms.sort.exchange
 import kotlin.system.measureTimeMillis
 
-// Time complexity: O(n^2/2)
-// Quadratic time complexity divided by 2 can't resolve big problems
+/*Time complexity:
+* Worst: O(n^2/2)
+* Average: O(n^2/2)
+* Best: O(n^2/2)
+* In place: Yes
+* Stable: No
+* Remarks: uses N exchanges
+*
+* Quadratic time complexity divided by 2 can't resolve big problems
+*/
 class SelectionSort {
 
     fun sortIntegersAscending(array: Array<Int>, start: Int, end: Int) {

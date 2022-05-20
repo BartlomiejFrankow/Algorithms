@@ -2,8 +2,15 @@ package com.example.algorithms.sort.merge.kotlin
 
 import com.example.algorithms.sort.selection.SelectionSort
 
-/*
-* Time complexity: O(n log n)
+/*Time complexity:
+* Worst: O(n log n)
+* Average: O(n log n)
+* Best: O(n log n)
+* In place: No
+* Stable: Yes
+* Remarks: n log n guarantee
+*
+* O(n log n) guarantee
 * Compares? Merge sort IS OPTIMAL with respect to number of compares.
 * Space? Merge sort IS NOT OPTIMAL with respect to space usage.
 */

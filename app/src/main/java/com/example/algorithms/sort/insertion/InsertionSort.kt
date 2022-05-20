@@ -3,8 +3,16 @@ package com.example.algorithms.sort.insertion
 import com.example.algorithms.sort.exchange
 import kotlin.system.measureTimeMillis
 
-// Time complexity: O(1/4 n^2)
-// Faster than selection sort in best scenario (partly sorted array) but lower in worst (desc input array)
+/*Time complexity:
+* Worst: O(n^2/2)
+* Average: O(n^2/4)
+* Best: O(n)
+* In place: Yes
+* Stable: Yes
+* Remarks: will work well for small n file or partially ordered
+*
+* Faster than selection sort in best scenario (partly sorted array) but lower in worst (desc input array)
+*/
 class InsertionSort {
 
     fun sortIntegersAscending(array: Array<Int>) {

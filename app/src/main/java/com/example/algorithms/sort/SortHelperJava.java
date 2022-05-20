@@ -12,4 +12,8 @@ public class SortHelperJava {
         a[j] = swap;
     }
 
+    public static int compareTo(Comparable v, Comparable w){
+        return v.compareTo(w);
+    }
+
 }

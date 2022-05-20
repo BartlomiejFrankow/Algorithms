@@ -3,10 +3,14 @@ package com.example.algorithms.sort.quick
 import com.example.algorithms.sort.exchange
 import com.example.algorithms.sort.shuffle.Shuffle
 
-/*
-* Time complexity in best case: ~O(n log n)
-* Time complexity in worst case: ~O(1/2 n^2) - shuffling eliminates worst case
-* */
+/*Time complexity:
+* Worst: O(n^2/2) - shuffling eliminates worst case
+* Average: O(2n log n)
+* Best: O(n log n)
+* In place: Yes
+* Stable: No
+* Remarks: n log n probabilistic guarantee fastest in practice -> if made improvements to deal with duplicate keys
+*/
 class QuickSort {
 
     private var beginTime = 0L

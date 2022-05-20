@@ -4,7 +4,14 @@ import com.example.algorithms.help.StdOut
 import com.example.algorithms.sort.exchange
 import kotlin.system.measureTimeMillis
 
-// Time complexity: O(n^3/2)
+/*Time complexity:
+* Worst: ?
+* Average: ?
+* Best: O(n)
+* In place: Yes
+* Stable: No
+* Remarks: will work fast for intermediate size n file with not much code
+*/
 class ShellSortKotlin {
 
     fun sortIntegersAscending(array: Array<Int>) {
