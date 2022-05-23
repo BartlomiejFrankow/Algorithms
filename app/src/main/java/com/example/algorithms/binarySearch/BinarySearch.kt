@@ -7,7 +7,7 @@ class BinarySearch {
     // e.g., when the key we are searching for is not in the array.
     fun search(integersArray: IntArray, searchGoal: Int): Int {
         var low = 0
-        var high = integersArray.size
+        var high = integersArray.last()
 
         while (low <= high) {
             val middle = low + (high - low) / 2
