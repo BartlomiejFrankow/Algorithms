@@ -10,6 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.algorithms.sort.heap.ascending
+import com.example.algorithms.sort.heap.heapSort
 import com.example.algorithms.sort.insertion.InsertionSort
 import com.example.algorithms.sort.merge.java.MergeSortJava
 import com.example.algorithms.sort.merge.kotlin.MergeSortKotlin
@@ -40,16 +42,18 @@ class MainActivity : ComponentActivity() {
 //        val mergeSortRandomCopy = randomIntegers.copyOf()
 //        val quickSortRandomArrayCopy = randomIntegers.copyOf()
 //        val threeWayQuickSortRandomArrayCopy = randomIntegers.copyOf()
+//        val heapSortRandomArrayCopy = randomIntegers.copyOf()
 //
 //        SelectionSort().sortIntegersAscending(randomIntegers, 0, randomIntegers.size)
 //        InsertionSort().sortIntegersAscending(insertSortRandomCopy)
 //        ShellSortKotlin().sortIntegersAscending(shellSortRandomCopy)
-//        MergeSortKotlin().merge(mergeSortRandomCopy)
 //        MergeSortJava.sort(mergeSortJavaRandomCopy)
+//        MergeSortKotlin().merge(mergeSortRandomCopy)
 //        QuickSort().sort(quickSortRandomArrayCopy)
 //        ThreeWayQuickSort().sort(threeWayQuickSortRandomArrayCopy)
 //
 //        Shuffle().randomize(randomIntegers)
+//        heapSortRandomArrayCopy.heapSort(ascending)
 
         setContent {
             AlgorithmsTheme {
