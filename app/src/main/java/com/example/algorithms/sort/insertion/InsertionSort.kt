@@ -12,6 +12,7 @@ import kotlin.system.measureTimeMillis
 * Remarks: will work well for small n file or partially ordered
 *
 * Faster than selection sort in best scenario (partly sorted array) but lower in worst (desc input array)
+* To improve selection sort using shuffling is recommended in this case we will use average scenario O(n^2/4)
 */
 class InsertionSort {
 

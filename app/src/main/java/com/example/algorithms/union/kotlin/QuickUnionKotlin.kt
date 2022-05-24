@@ -1,7 +1,5 @@
 package com.example.algorithms.union.kotlin
-
-class QuickUnionKotlin {
-    /*
+/*
     Quick union - faster than quick find but still too slow
     Takes constant time given roots
 
@@ -9,6 +7,8 @@ class QuickUnionKotlin {
     - Trees can get tall
     - Find too expensive (could be N array accesses)
     */
+
+class QuickUnionKotlin {
     private lateinit var id: IntArray
     private lateinit var sizeArray: IntArray // count number of objects in the tree rooted at 'i'
 

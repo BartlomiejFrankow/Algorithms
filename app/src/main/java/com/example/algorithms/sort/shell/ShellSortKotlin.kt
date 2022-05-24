@@ -12,6 +12,9 @@ import kotlin.system.measureTimeMillis
 * Stable: No
 * Remarks: will work fast for intermediate size n file with not much code
 */
+
+private const val THREE_STEP = 3
+
 class ShellSortKotlin {
 
     fun sortIntegersAscending(array: Array<Int>) {
@@ -19,9 +22,11 @@ class ShellSortKotlin {
 
         val measuredTime = measureTimeMillis {
             var sequence = 1
-            while (sequence < array.size / 3) {
-                sequence = 3 * sequence + 1 // 1, 4, 13, 40, 121, 364...
+
+            while (sequence < array.size / THREE_STEP) {
+                sequence = THREE_STEP * sequence + 1 // 1, 4, 13, 40, 121, 364...
             }
+
             while (sequence >= 1) {
                 for (i in sequence until array.size) {
                     var j = i

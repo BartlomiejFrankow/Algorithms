@@ -21,6 +21,7 @@ import com.example.algorithms.sort.quick.ThreeWayQuickSort
 import com.example.algorithms.sort.selection.SelectionSort
 import com.example.algorithms.sort.shell.ShellSortKotlin
 import com.example.algorithms.sort.shuffle.Shuffle
+import com.example.algorithms.traversal.Traversal
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 import java.util.*
 
@@ -54,6 +55,13 @@ class MainActivity : ComponentActivity() {
 //
 //        Shuffle().randomize(randomIntegers)
 //        heapSortRandomArrayCopy.heapSort(ascending)
+
+//        val traversal = Traversal()
+//        val root = traversal.createTreeAndGetRoot()
+//
+//        traversal.preorder(root)
+//        traversal.inorder(root)
+//        traversal.postorder(root)
 
         setContent {
             AlgorithmsTheme {

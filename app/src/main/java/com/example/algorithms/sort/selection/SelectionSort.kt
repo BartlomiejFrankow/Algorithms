@@ -20,16 +20,16 @@ class SelectionSort {
 
         val measuredTime = measureTimeMillis {
 
-            for (item in start until end) {
-                var minimum = item
+            for (itemIndex in start until end) {
+                var minValueIndex = itemIndex
 
-                // search for value lower than value from previous index
-                for (nextItem in item + 1 until end) {
-                    if (array[nextItem] < array[minimum]) minimum = nextItem
+                // search for value lower than value from nextItemIndex
+                for (nextItemIndex in itemIndex + 1 until end) {
+                    if (array[nextItemIndex] < array[minValueIndex]) minValueIndex = nextItemIndex
                 }
 
                 // when lower value will be found then swap it with previous index
-                exchange(array, item, minimum)
+                exchange(array, itemIndex, minValueIndex)
 
                 // ...and so on check for a swap for every item in list
             }

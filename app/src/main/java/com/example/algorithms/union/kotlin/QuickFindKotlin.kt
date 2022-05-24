@@ -1,14 +1,16 @@
 package com.example.algorithms.union.kotlin
 
-class QuickFindKotlin {
-    /*
-     Quick Find example O(n^2) - too slow for big problems
-     It takes time proportional to depth of 'p' and 'q'
+/*
+    Quick Find example O(n^2) - too slow for big problems
+    It takes time proportional to depth of 'p' and 'q'
 
-     Defects:
-     - Union is too expensive (N array accesses)
-     - Trees are flat, but too expensive to keep them flat
-     */
+    Defects:
+    - Union is too expensive (N array accesses)
+    - Trees are flat, but too expensive to keep them flat
+    */
+
+class QuickFindKotlin {
+
     private lateinit var id: IntArray
 
     fun quickFind(N: Int) {
