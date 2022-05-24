@@ -21,7 +21,6 @@ import com.example.algorithms.sort.quick.ThreeWayQuickSort
 import com.example.algorithms.sort.selection.SelectionSort
 import com.example.algorithms.sort.shell.ShellSortKotlin
 import com.example.algorithms.sort.shuffle.Shuffle
-import com.example.algorithms.tasks.TreePrinter
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 import java.util.*
 
@@ -66,21 +65,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-private fun taskOne() {
-    val inputList = mutableListOf<Relation>()
-
-    inputList.add(Relation("animal", "mammal"))
-    inputList.add(Relation("animal", "bird"))
-    inputList.add(Relation("lifeform", "animal"))
-    inputList.add(Relation("cat", "lion"))
-    inputList.add(Relation("mammal", "cat"))
-    inputList.add(Relation("animal", "fish"))
-
-    TreePrinter().printTree(inputList)
-}
-
-data class Relation(val parent: String, val child: String)
 
 @Composable
 fun Greeting(name: String) {
