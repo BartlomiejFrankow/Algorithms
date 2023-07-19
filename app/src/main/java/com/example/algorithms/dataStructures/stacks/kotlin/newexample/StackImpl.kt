@@ -2,8 +2,8 @@ package com.example.algorithms.dataStructures.stacks.kotlin.newexample
 
 /**
  * Stack are adding elements one after another, but getting elements
- * from stack starts from the last one and moves to the first one.
- * That's because stacks are LIFO(last in first out)
+ * starts from the last one and moves to the first one.
+ * That's because stacks are LIFO(last in first out).
  */
 class StackImpl<T : Any> : Stack<T> {
 

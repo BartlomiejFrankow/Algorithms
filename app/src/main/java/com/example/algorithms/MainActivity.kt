@@ -10,21 +10,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.algorithms.binarySearch.BinarySearch
-import com.example.algorithms.dataStructures.stacks.kotlin.newexample.isValidParentheses
-import com.example.algorithms.sort.heap.ascending
-import com.example.algorithms.sort.heap.heapSort
-import com.example.algorithms.sort.insertion.InsertionSort
-import com.example.algorithms.sort.merge.java.MergeSortJava
-import com.example.algorithms.sort.merge.kotlin.MergeSortKotlin
-import com.example.algorithms.sort.quick.QuickSort
-import com.example.algorithms.sort.quick.ThreeWayQuickSort
-import com.example.algorithms.sort.selection.SelectionSort
-import com.example.algorithms.sort.shell.ShellSortKotlin
-import com.example.algorithms.sort.shuffle.Shuffle
-import com.example.algorithms.traversal.Traversal
+import com.example.algorithms.dataStructures.queue.newexample.Queue
+import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
 import com.example.algorithms.ui.theme.AlgorithmsTheme
-import java.util.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,10 +55,16 @@ class MainActivity : ComponentActivity() {
 //        Stacks
 //        println("((())))".isValidParentheses())
 
+//        Queue
+//        queueExample()
+
         setContent {
             AlgorithmsTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colors.background
+                ) {
                     Greeting("Android")
                 }
             }
@@ -79,7 +73,20 @@ class MainActivity : ComponentActivity() {
 }
 
 fun main() {
+}
 
+private fun queueExample() {
+    QueueImpl<Int>().apply {
+        enqueue(1)
+        println("Add element 1")
+        enqueue(2)
+        println("Add element 2")
+        enqueue(3)
+        println("Add element 3")
+
+        // results should be FIFO: 1, 2, 3
+        println("Peek elements one by one: ${this.peek()}, ${this.peek()}, ${this.peek()}")
+    }
 }
 
 @Composable
