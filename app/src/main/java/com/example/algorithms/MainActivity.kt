@@ -10,7 +10,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.algorithms.dataStructures.queue.newexample.Queue
 import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 
@@ -45,6 +44,12 @@ class MainActivity : ComponentActivity() {
 //        Shuffle().randomize(randomIntegers)
 //        heapSortRandomArrayCopy.heapSort(ascending)
 
+//        Trees
+//        val tree = makeTree()
+//        tree.forEachLevelOrder { println(it.value) }
+//        tree.search("chai tea")
+//        tree.printEachLevel()
+//
 //        val traversal = Traversal()
 //        val root = traversal.createTreeAndGetRoot()
 //
