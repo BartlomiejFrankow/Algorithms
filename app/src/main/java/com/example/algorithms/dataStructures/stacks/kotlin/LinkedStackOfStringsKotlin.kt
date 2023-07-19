@@ -2,7 +2,7 @@ package com.example.algorithms.dataStructures.stacks.kotlin
 
 // Every operation takes constant time in worst case - super fast!
 // Uses extra time and space to deal with the links
-class LinkedStactOfStringsKotlin {
+class LinkedStackOfStringsKotlin {
     private var first: Node? = null
 
     // Time complexity: every operation takes constant time in the worst case O(n)

@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.algorithms.binarySearch.BinarySearch
+import com.example.algorithms.dataStructures.stacks.kotlin.newexample.isValidParentheses
 import com.example.algorithms.sort.heap.ascending
 import com.example.algorithms.sort.heap.heapSort
 import com.example.algorithms.sort.insertion.InsertionSort
@@ -63,6 +64,9 @@ class MainActivity : ComponentActivity() {
 //        traversal.inorder(root)
 //        traversal.postorder(root)
 
+//        Stacks
+//        println("((())))".isValidParentheses())
+
         setContent {
             AlgorithmsTheme {
                 // A surface container using the 'background' color from the theme
@@ -72,6 +76,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+fun main() {
+
 }
 
 @Composable
