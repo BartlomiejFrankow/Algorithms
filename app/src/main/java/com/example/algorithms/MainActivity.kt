@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.algorithms.dataStructures.hash.HashMapExample
 import com.example.algorithms.dataStructures.linkedList.LinkedList
 import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
 import com.example.algorithms.ui.theme.AlgorithmsTheme
@@ -73,6 +74,21 @@ class MainActivity : ComponentActivity() {
 //        linkedListGetMiddleNodeExample()
 //        linkedListPrintReversedExample()
 //        linkedListAddReversedExample()
+
+//        HashMap
+//        HashMapExample().apply {
+//            add("Banana")
+//            add("Avokado")
+//            add("Blueberry")
+//            add("Apple")
+//            add("Coconut")
+//
+//            printMap()
+//
+//            remove("Blueberry")
+//
+//            printMap()
+//        }
 
         setContent {
             AlgorithmsTheme {
