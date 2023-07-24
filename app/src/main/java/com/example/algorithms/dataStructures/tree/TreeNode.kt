@@ -4,6 +4,10 @@ import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
 
 typealias Visitor<T> = (TreeNode<T>) -> Unit
 
+/**
+ * Tree is folder structure storage type with `add` constant time O(1)
+ * and `get/search` linear time O(n).
+ * */
 class TreeNode<T>(val value: T) {
 
     private val children: MutableList<TreeNode<T>> = mutableListOf()

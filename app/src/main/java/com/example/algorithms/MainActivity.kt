@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.algorithms.dataStructures.hash.HashMapExample
 import com.example.algorithms.dataStructures.linkedList.LinkedList
 import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
+import com.example.algorithms.traversal.binaryTree.BinaryNode
 import com.example.algorithms.ui.theme.AlgorithmsTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,6 +59,21 @@ class MainActivity : ComponentActivity() {
 //        traversal.preorder(root)
 //        traversal.inorder(root)
 //        traversal.postorder(root)
+
+//        BinaryNode(10).apply {
+//            insert(5)
+//            insert(8)
+//            insert(15)
+//
+//            println("In order:")
+//            printInOrder()
+//
+//            println("Pre order:")
+//            printPreOrder()
+//
+//            println("Post order:")
+//            printPostOrder()
+//        }
 
 //        Stacks
 //        println("((())))".isValidParentheses())
