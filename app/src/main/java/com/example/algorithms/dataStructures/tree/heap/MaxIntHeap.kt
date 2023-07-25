@@ -12,12 +12,13 @@ import java.util.Arrays
  *   / \  / \
  *  3  4  5  6
  *
- *  A min heap is a heap where every single parent node, including
- *  the root, is less than or equal to the value of its children nodes.
+ *  A max heap is effectively the converse of a min heap.
+ *  In this format, every parent node, including the root, is
+ *  greater than or equal to the value of its children nodes.
  *
  *  https://medium.com/basecs/learning-to-love-heaps-cef2b273a238
  */
-class MinIntHeap {
+class MaxIntHeap {
     private var capacity: Int = 10
     var size: Int = 0
 
@@ -78,7 +79,7 @@ class MinIntHeap {
     }
 
     /**
-     * Remove element with smallest value from array if exist
+     * Remove element with biggest value from array if exist
      * */
     fun poll(): Int? {
         if (size == 0) return null
@@ -102,48 +103,56 @@ class MinIntHeap {
     }
 
     /**
-     * Sort data from lower (up) to biggest (down) in tree after add new element
+     * Sort data from biggest (up) to lower (down) in tree after add new element
      * */
     private fun heapifyUp() {
         var index = size - 1 // last element index
 
-        while (hasParent(index) && parent(index) > items[index]) {
+        while (hasParent(index) && parent(index) < items[index]) {
             swap(getParentIndex(index), index)
             index = getParentIndex(index)
         }
     }
 
     /**
-     * Sort data from lower (up) to biggest (down) in tree after remove smallest element (root)
+     * Sort data from biggest (up) to lower (down) in tree after remove biggest element (root)
      * */
     private fun heapifyDown() {
         var index = 0
 
         while (hasLeftChild(index)) {
-            var smallerChildIndex = getLeftChildIndex(index)
+            var greaterChildIndex = getLeftChildIndex(index)
 
-            if (hasRightChild(index) && rightChild(index) < leftChild(index)) {
-                smallerChildIndex = getRightChildIndex(index)
+            if (hasRightChild(index) && rightChild(index) > leftChild(index)) {
+                greaterChildIndex = getRightChildIndex(index)
             }
 
-            if (items[index] < items[smallerChildIndex]) {
+            if (items[index] > items[greaterChildIndex]) {
                 break
             } else {
-                swap(index, smallerChildIndex)
+                swap(index, greaterChildIndex)
             }
 
-            index = smallerChildIndex
+            index = greaterChildIndex
         }
     }
 }
 
 fun main() {
-    val heap = MinIntHeap()
-    heap.add(10)
-    heap.add(20)
-    heap.add(15)
-    heap.add(17)
-    heap.add(8)
+    val heap = MaxIntHeap()
+    heap.add(58)
+    heap.add(40)
+    heap.add(50)
+    heap.add(31)
+    heap.add(3)
+    heap.add(40)
+
+    for (i in 0 until heap.size) {
+        print("[${heap.peekAt(i)}] ")
+    }
+
+    heap.poll()
+    println()
 
     for (i in 0 until heap.size) {
         print("[${heap.peekAt(i)}] ")
