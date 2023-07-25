@@ -1,4 +1,4 @@
-package com.example.algorithms.traversal
+package com.example.algorithms.dataStructures.tree.traversal
 
 // Time complexity: O(n)
 class Traversal {

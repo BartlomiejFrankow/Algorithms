@@ -1,4 +1,4 @@
-package com.example.algorithms.traversal.binaryTree;
+package com.example.algorithms.dataStructures.tree.binaryTree;
 
 public class Node {
     Node left, right;
