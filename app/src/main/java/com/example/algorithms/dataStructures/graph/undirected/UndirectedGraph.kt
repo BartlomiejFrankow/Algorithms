@@ -1,4 +1,4 @@
-package com.example.algorithms.dataStructures.graph
+package com.example.algorithms.dataStructures.graph.undirected
 
 import com.example.algorithms.dataStructures.queue.newexample.QueueImpl
 import com.example.algorithms.dataStructures.stacks.kotlin.newexample.StackImpl
