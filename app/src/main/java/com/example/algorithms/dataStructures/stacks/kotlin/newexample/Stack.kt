@@ -1,6 +1,6 @@
 package com.example.algorithms.dataStructures.stacks.kotlin.newexample
 
-interface Stack<T: Any> {
+interface Stack<T> {
 
     fun pop(): T?
 

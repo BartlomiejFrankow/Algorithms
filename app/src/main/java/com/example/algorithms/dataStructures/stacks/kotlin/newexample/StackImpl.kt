@@ -5,7 +5,7 @@ package com.example.algorithms.dataStructures.stacks.kotlin.newexample
  * starts from the last one and moves to the first one.
  * That's because stacks are LIFO(last in first out).
  */
-class StackImpl<T : Any> : Stack<T> {
+class StackImpl<T> : Stack<T> {
 
     private var storage = arrayListOf<T>()
 
