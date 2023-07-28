@@ -16,6 +16,6 @@ class Shuffle {
             }
         }
 
-        println("SHUFFLE SORT TIME: $measuredTime, results: ${array.contentToString()}")
+        println("SHUFFLE SORT TIME: $measuredTime ms, results: ${array.contentToString()}")
     }
 }

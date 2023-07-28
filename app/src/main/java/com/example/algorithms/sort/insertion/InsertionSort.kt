@@ -36,7 +36,7 @@ class InsertionSort {
             }
         }
 
-        println("INSERTION SORT TIME: $measuredTime, results: ${array.contentToString()}")
+        println("INSERTION SORT TIME: $measuredTime ms, results: ${array.contentToString()}")
     }
 
 }

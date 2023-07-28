@@ -34,7 +34,7 @@ class SelectionSort {
                 // ...and so on check for a swap for every item in list
             }
         }
-        println("SELECTION SORT TIME: $measuredTime, results: ${array.contentToString()}")
+        println("SELECTION SORT TIME: $measuredTime ms, results: ${array.contentToString()}")
     }
 
 }

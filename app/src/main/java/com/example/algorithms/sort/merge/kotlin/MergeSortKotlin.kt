@@ -65,7 +65,7 @@ class MergeSortKotlin {
             }
         }
 
-        println("MERGE SORT TIME: ${System.currentTimeMillis() - beginTime}, result: ${mainArray.contentToString()}")
+        println("MERGE SORT TIME: ${System.currentTimeMillis() - beginTime} ms, result: ${mainArray.contentToString()}")
     }
 
 }

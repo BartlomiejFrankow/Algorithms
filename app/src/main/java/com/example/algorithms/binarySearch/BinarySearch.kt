@@ -2,7 +2,7 @@ package com.example.algorithms.binarySearch
 
 class BinarySearch {
 
-    // Time complexity is: 1 + lg N
+    // Time complexity is: O(1) + lg N
     // In binary search, the number of array accesses equal the number of compares, which we have seen is "~1lgn"
     // e.g., when the key we are searching for is not in the array.
     fun search(integersArray: IntArray, searchGoal: Int): Int {
@@ -16,7 +16,7 @@ class BinarySearch {
                 searchGoal < integersArray[middle] -> high = middle - 1
                 searchGoal > integersArray[middle] -> low = middle + 1
                 else -> return integersArray[middle].also {
-                    println("Binary search: goal found and it is ${integersArray[middle]}")
+                    println("Binary search: goal found and it is ${integersArray[middle]} (taken from index: $middle)")
                 }
             }
         }
@@ -25,4 +25,8 @@ class BinarySearch {
         return -1
     }
 
+}
+
+fun main() {
+    BinarySearch().search(intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 7)
 }

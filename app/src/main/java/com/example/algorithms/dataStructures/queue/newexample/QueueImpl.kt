@@ -29,3 +29,17 @@ class QueueImpl<T> : Queue<T> {
         return storage.add(element)
     }
 }
+
+fun main() {
+    QueueImpl<Int>().apply {
+        enqueue(1)
+        println("Add element 1")
+        enqueue(2)
+        println("Add element 2")
+        enqueue(3)
+        println("Add element 3")
+
+        // results should be FIFO: 1, 2, 3
+        println("Peek elements one by one: ${this.peek()}, ${this.peek()}, ${this.peek()}")
+    }
+}

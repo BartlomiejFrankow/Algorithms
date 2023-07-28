@@ -47,7 +47,7 @@ class ThreeWayQuickSort {
         sort(mainArray, low, lt - 1)
         sort(mainArray, gt + 1, high)
 
-        println("THREE WAY QUICK SORT TIME: ${System.currentTimeMillis() - beginTime}, result: ${mainArray.contentToString()}")
+        println("THREE WAY QUICK SORT TIME: ${System.currentTimeMillis() - beginTime} ms, result: ${mainArray.contentToString()}")
     }
 
 }

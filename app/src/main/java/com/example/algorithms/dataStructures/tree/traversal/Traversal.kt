@@ -172,3 +172,11 @@ class Node(var data: String) {
     var rightChild: Node? = null
 }
 
+fun main() {
+    val traversal = Traversal()
+    val root = traversal.createTreeAndGetRoot()
+
+    traversal.preorder(root)
+    traversal.inorder(root)
+    traversal.postorder(root)
+}

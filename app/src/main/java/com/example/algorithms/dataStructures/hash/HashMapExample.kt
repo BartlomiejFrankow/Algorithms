@@ -79,3 +79,19 @@ enum class HashMapAction {
     ADD,
     REMOVE
 }
+
+fun main() {
+    HashMapExample().apply {
+        add("Banana")
+        add("Avokado")
+        add("Blueberry")
+        add("Apple")
+        add("Coconut")
+
+        printMap()
+
+        remove("Blueberry")
+
+        printMap()
+    }
+}

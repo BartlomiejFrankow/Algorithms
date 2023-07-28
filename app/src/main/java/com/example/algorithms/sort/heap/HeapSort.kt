@@ -15,7 +15,7 @@ fun <T> Array<T>.heapSort(comparator: Comparator<T>) {
         }
     }
 
-    println("HEAP SORT TIME: $measureTime, result: ${this.contentToString()}")
+    println("HEAP SORT TIME: $measureTime ms, result: ${this.contentToString()}")
 }
 
 private fun leftChildIndex(index: Int) = (2 * index)

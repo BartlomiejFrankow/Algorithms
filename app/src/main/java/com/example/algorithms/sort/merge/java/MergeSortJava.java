@@ -42,7 +42,7 @@ public class MergeSortJava {
         sort(a, aux, mid + 1, hi);
         merge(a, aux, lo, mid, hi);
 
-        println("MERGE SORT JAVA TIME: " + (System.currentTimeMillis() - beginTime) + ", results: " + Arrays.toString(a));
+        println("MERGE SORT JAVA TIME: " + (System.currentTimeMillis() - beginTime) + " ms " + ", results: " + Arrays.toString(a));
     }
 
     public static void sort(Comparable[] a) {

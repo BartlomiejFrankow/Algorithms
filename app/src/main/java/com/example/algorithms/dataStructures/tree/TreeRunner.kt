@@ -42,3 +42,10 @@ fun makeTree(): TreeNode<String> {
 
     return tree
 }
+
+fun main() {
+    val tree = makeTree()
+    tree.forEachLevelOrder { println(it.value) }
+    tree.search("chai tea")
+    tree.printEachLevel()
+}

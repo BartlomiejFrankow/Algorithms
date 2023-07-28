@@ -32,7 +32,7 @@ class QuickSort {
         sort(mainArray, low, partitionMiddleElement - 1)
         sort(mainArray, partitionMiddleElement + 1, high)
 
-        println("QUICK SORT TIME: ${System.currentTimeMillis() - beginTime}, result: ${mainArray.contentToString()}")
+        println("QUICK SORT TIME: ${System.currentTimeMillis() - beginTime} ms, result: ${mainArray.contentToString()}")
     }
 
     private fun partition(mainArray: Array<Int>, low: Int, high: Int): Int {

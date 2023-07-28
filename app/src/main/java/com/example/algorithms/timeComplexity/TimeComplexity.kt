@@ -58,3 +58,7 @@ class TimeComplexity {
     }
     // -------------------------------------------------------------
 }
+
+fun main() {
+    TimeComplexity().checkOLogN()
+}

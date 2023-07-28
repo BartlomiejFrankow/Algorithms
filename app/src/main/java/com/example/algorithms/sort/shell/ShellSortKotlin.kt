@@ -39,6 +39,6 @@ class ShellSortKotlin {
             }
         }
 
-        StdOut.println("SHELL SORT KOTLIN TIME: $measuredTime, results: " + array.contentToString())
+        StdOut.println("SHELL SORT KOTLIN TIME: $measuredTime ms, results: " + array.contentToString())
     }
 }

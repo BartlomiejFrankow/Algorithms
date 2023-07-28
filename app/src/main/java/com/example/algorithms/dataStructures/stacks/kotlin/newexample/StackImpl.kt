@@ -43,3 +43,7 @@ fun String.isValidParentheses(): Boolean {
 
     return stack.isEmpty
 }
+
+fun main() {
+    println("((())))".isValidParentheses())
+}
