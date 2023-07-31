@@ -3,6 +3,15 @@ package com.example.algorithms.sort.heap
 import com.example.algorithms.sort.exchange
 import kotlin.system.measureTimeMillis
 
+/*Time complexity:
+* Worst: ?
+* Average: O(n log n)
+* Best: ?
+* In place: ?
+* Stable: ?
+* Notes: everything ends in same array. No need extra space to copy and store data.
+*/
+
 fun <T> Array<T>.heapSort(comparator: Comparator<T>) {
     println("HEAP SORT INPUT DATA: ${this.contentToString()}")
 

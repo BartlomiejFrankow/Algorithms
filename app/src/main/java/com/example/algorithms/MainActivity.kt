@@ -38,8 +38,7 @@ class MainActivity : ComponentActivity() {
 
 fun main() {
     // Algorithms examples
-    val times = 10
-    val randomIntegers = Array(10 * times) { Random().nextInt(100000 * times) }
+    val randomIntegers = Array(10_000) { Random().nextInt(100_000_000) }
     val insertSortRandomCopy = randomIntegers.copyOf()
     val shellSortRandomCopy = randomIntegers.copyOf()
     val mergeSortJavaRandomCopy = randomIntegers.copyOf()
@@ -50,7 +49,16 @@ fun main() {
 
     /**
      * Don't run all of algorithms at once - too many data and logs are not readable.
-     * Tests results was made on `Array(1000 * 10) { Random().nextInt(100000 * times) }`
+     * Tests results in right side comments next to it was made on 10_000 integer array.
+     *
+     * Shell sort is very quick, but heap sort is faster when input data is very large.
+     * For example in case of 10_000_000 random integers:
+     * Shell sort time: 14_030 ms
+     * Heap sort time: 12_248 ms
+     *
+     * But in lower input data like 10_000 random integers:
+     * Shell sort time: 6 ms
+     * Heap sort time: 16 ms
      * */
 //    SelectionSort().sortIntegersAscending(randomIntegers, 0, randomIntegers.size) // 52 milliseconds
 //    InsertionSort().sortIntegersAscending(insertSortRandomCopy) // 71 milliseconds

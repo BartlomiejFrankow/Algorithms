@@ -5,9 +5,9 @@ import com.example.algorithms.sort.exchange
 import kotlin.system.measureTimeMillis
 
 /*Time complexity:
-* Worst: ?
-* Average: ?
-* Best: O(n)
+* Worst: O(n^2) - insertion sort
+* Average: O(n*log n) ~ O(n1.25)
+* Best: O(n log n)
 * In place: Yes
 * Stable: No
 * Remarks: will work fast for intermediate size n file with not much code
