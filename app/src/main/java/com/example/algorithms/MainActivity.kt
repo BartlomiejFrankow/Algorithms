@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import com.example.algorithms.sort.heap.ascending
+import com.example.algorithms.sort.heap.descending
 import com.example.algorithms.sort.heap.heapSort
 import com.example.algorithms.sort.insertion.InsertionSort
 import com.example.algorithms.sort.merge.java.MergeSortJava
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
 fun main() {
     // Algorithms examples
     val times = 10
-    val randomIntegers = Array(100 * times) { Random().nextInt(1000 * times) }
+    val randomIntegers = Array(1000 * times) { Random().nextInt(100000 * times) }
     val insertSortRandomCopy = randomIntegers.copyOf()
     val shellSortRandomCopy = randomIntegers.copyOf()
     val mergeSortJavaRandomCopy = randomIntegers.copyOf()
@@ -47,14 +48,17 @@ fun main() {
     val threeWayQuickSortRandomArrayCopy = randomIntegers.copyOf()
     val heapSortRandomArrayCopy = randomIntegers.copyOf()
 
-    // Don't run all of algorithms at once - too many data and logs are not readable ;)
-//    SelectionSort().sortIntegersAscending(randomIntegers, 0, randomIntegers.size)
-//    InsertionSort().sortIntegersAscending(insertSortRandomCopy)
-//    ShellSortKotlin().sortIntegersAscending(shellSortRandomCopy)
-//    MergeSortJava.sort(mergeSortJavaRandomCopy)
-//    MergeSortKotlin().merge(mergeSortRandomCopy)
-//    QuickSort().sort(quickSortRandomArrayCopy)
-//    ThreeWayQuickSort().sort(threeWayQuickSortRandomArrayCopy)
-//    Shuffle().randomize(randomIntegers)
-//    heapSortRandomArrayCopy.heapSort(ascending)
+    /**
+     * Don't run all of algorithms at once - too many data and logs are not readable.
+     * Tests results was made on `Array(1000 * 10) { Random().nextInt(100000 * times) }`
+     * */
+//    SelectionSort().sortIntegersAscending(randomIntegers, 0, randomIntegers.size) // 52 milliseconds
+//    InsertionSort().sortIntegersAscending(insertSortRandomCopy) // 71 milliseconds
+//    ShellSortKotlin().sortIntegersAscending(shellSortRandomCopy) // 6 milliseconds
+//    MergeSortJava.sort(mergeSortJavaRandomCopy) // 3476 milliseconds
+//    MergeSortKotlin().merge(mergeSortRandomCopy) // 47 milliseconds
+//    QuickSort().sort(quickSortRandomArrayCopy) // 1984 milliseconds
+//    ThreeWayQuickSort().sort(threeWayQuickSortRandomArrayCopy) // 1923 milliseconds
+//    Shuffle().randomize(randomIntegers) // 2ms
+//    heapSortRandomArrayCopy.heapSort(ascending) // 16ms
 }
