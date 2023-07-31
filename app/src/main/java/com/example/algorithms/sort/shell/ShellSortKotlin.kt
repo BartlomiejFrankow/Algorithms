@@ -13,7 +13,7 @@ import kotlin.system.measureTimeMillis
 * Remarks: will work fast for intermediate size n file with not much code
 */
 
-private const val THREE_STEP = 3
+private const val STEPS = 3 // steps could be modified
 
 class ShellSortKotlin {
 
@@ -23,8 +23,8 @@ class ShellSortKotlin {
         val measuredTime = measureTimeMillis {
             var sequence = 1
 
-            while (sequence < array.size / THREE_STEP) {
-                sequence = THREE_STEP * sequence + 1 // 1, 4, 13, 40, 121, 364...
+            while (sequence < array.size / STEPS) {
+                sequence = STEPS * sequence + 1 // 1, 4, 13, 40, 121, 364... depends on step value
             }
 
             while (sequence >= 1) {
@@ -35,7 +35,7 @@ class ShellSortKotlin {
                         j -= sequence
                     }
                 }
-                sequence /= 3
+                sequence /= STEPS
             }
         }
 

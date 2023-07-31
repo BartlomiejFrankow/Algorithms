@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 fun main() {
     // Algorithms examples
     val times = 10
-    val randomIntegers = Array(1000 * times) { Random().nextInt(100000 * times) }
+    val randomIntegers = Array(10 * times) { Random().nextInt(100000 * times) }
     val insertSortRandomCopy = randomIntegers.copyOf()
     val shellSortRandomCopy = randomIntegers.copyOf()
     val mergeSortJavaRandomCopy = randomIntegers.copyOf()
