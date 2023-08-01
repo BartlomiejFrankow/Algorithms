@@ -1,10 +1,14 @@
 package com.example.algorithms.binarySearch
 
+/**
+ * Time complexity is: O(1) + lg N In binary search, the number of array accesses equal
+ * the number of compares, which we have seen is "~1lgn"
+ * e.g., when the key we are searching for is not in the array.
+ *
+ * Input data need to be sorted ascending before search.
+ */
 class BinarySearch {
 
-    // Time complexity is: O(1) + lg N
-    // In binary search, the number of array accesses equal the number of compares, which we have seen is "~1lgn"
-    // e.g., when the key we are searching for is not in the array.
     fun search(array: IntArray, searchGoal: Int): Int {
         var left = 0
         var right = array.size - 1
