@@ -15,19 +15,11 @@ class QueueImpl<T> : Queue<T> {
     override val isEmpty: Boolean
         get() = count == 0
 
-    override fun peek(): T? = storage.getOrNull(0)
+    override fun peek(): T? = storage.firstOrNull()
 
-    override fun dequeue(): T? {
-        return if (isEmpty) {
-            null
-        } else {
-            storage.removeAt(0)
-        }
-    }
+    override fun dequeue(): T? = storage.removeFirstOrNull()
 
-    override fun enqueue(element: T): Boolean {
-        return storage.add(element)
-    }
+    override fun enqueue(element: T) = storage.add(element)
 }
 
 fun main() {

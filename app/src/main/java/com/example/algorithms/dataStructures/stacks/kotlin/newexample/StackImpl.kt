@@ -12,17 +12,11 @@ class StackImpl<T> : Stack<T> {
     override val count: Int
         get() = storage.size
 
-    override fun peek(): T? {
-        return storage.lastOrNull()
-    }
+    override fun peek() = storage.lastOrNull()
 
-    override fun pop(): T? {
-        return storage.removeLastOrNull()
-    }
+    override fun pop() = storage.removeLastOrNull()
 
-    override fun push(element: T) {
-        storage.add(element)
-    }
+    override fun push(element: T) = storage.add(element)
 }
 
 fun String.isValidParentheses(): Boolean {
