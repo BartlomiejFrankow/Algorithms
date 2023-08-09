@@ -13,6 +13,9 @@ class BinarySearch {
         var left = 0
         var right = array.size - 1
 
+        // when the value is higher or lower than highest or lowest value in the array there is no need to search
+        if (searchGoal > array[right] || searchGoal < array[left]) return -1
+
         while (left <= right) {
             val middle = left + (right - left) / 2
 
@@ -41,8 +44,13 @@ class BinarySearch {
         }
     }
 
-    fun recursiveSearch(integersArray: IntArray, searchGoal: Int) =
-        recursiveSearch(integersArray, searchGoal, 0, integersArray.size - 1)
+    fun recursiveSearch(array: IntArray, searchGoal: Int): Int {
+        // when the value is higher or lower than highest or lowest value in the array there is no need to search
+        if (searchGoal > array[array.size - 1] || searchGoal < array[0]) return -1
+
+        return recursiveSearch(array, searchGoal, 0, array.size - 1)
+    }
+
 
     private fun fail() {
         println("Binary search: goal not found")
